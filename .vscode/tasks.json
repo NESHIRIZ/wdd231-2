@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open index.html in default browser",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"Start-Process -FilePath '${workspaceFolder}\\\\index.html'\"",
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run live-server (npm start)",
+      "type": "shell",
+      "command": "npm run start",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
