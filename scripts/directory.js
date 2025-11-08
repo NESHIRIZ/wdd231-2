@@ -16,42 +16,39 @@
     };
   });
 
-  // Create controls
-  const controls = document.createElement('div');
-  controls.className = 'directory-controls';
-  controls.innerHTML = `
-    <label class="sr-only" for="biz-search">Search businesses</label>
-    <input id="biz-search" type="search" placeholder="Search businesses, e.g. 'tech' or 'market'">
-    <select id="biz-sort" aria-label="Sort businesses">
-      <option value="relevance">Sort: Relevance</option>
-      <option value="az">A → Z</option>
-      <option value="za">Z → A</option>
-    </select>
-    <button id="biz-clear" type="button" aria-label="Clear search">Clear</button>
-  `;
-  list.parentNode.insertBefore(controls, list);
+  // Controls: search, sort, clear (create if not present)
+  let controls = list.parentNode.querySelector('.directory-controls');
+  if (!controls) {
+    controls = document.createElement('div');
+    controls.className = 'directory-controls';
+    controls.innerHTML = `
+      <label class="sr-only" for="biz-search">Search businesses</label>
+      <input id="biz-search" type="search" placeholder="Search businesses, e.g. 'tech' or 'market'">
+      <select id="biz-sort" aria-label="Sort businesses">
+        <option value="relevance">Sort: Relevance</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+      </select>
+      <button id="biz-clear" type="button" aria-label="Clear search">Clear</button>
+    `;
+    list.parentNode.insertBefore(controls, list);
+  }
 
   const searchInput = controls.querySelector('#biz-search');
   const sortSelect = controls.querySelector('#biz-sort');
   const clearBtn = controls.querySelector('#biz-clear');
 
-  // Debounce helper
-  function debounce(fn, wait = 200) {
+  function debounce(fn, wait = 160) {
     let t;
     return (...args) => {
       clearTimeout(t);
-      t = setTimeout(() => fn.apply(this, args), wait);
+      t = setTimeout(() => fn(...args), wait);
     };
   }
 
   function renderMatches(filtered) {
-    // Hide all nodes first
     items.forEach(i => i.node.style.display = 'none');
-    // Show filtered in same order
-    filtered.forEach(i => {
-      i.node.style.display = '';
-    });
-    // If no results
+    filtered.forEach(i => i.node.style.display = '');
     if (filtered.length === 0) {
       if (!list._noResults) {
         const no = document.createElement('li');
@@ -79,12 +76,11 @@
     const sort = sortSelect.value;
     if (sort === 'az') filtered.sort((a, b) => a.name.localeCompare(b.name));
     if (sort === 'za') filtered.sort((a, b) => b.name.localeCompare(a.name));
-    // relevance: keep original DOM order (items array order)
 
     renderMatches(filtered);
   }
 
-  const debounced = debounce(searchAndSort, 180);
+  const debounced = debounce(searchAndSort, 160);
   searchInput.addEventListener('input', debounced);
   sortSelect.addEventListener('change', searchAndSort);
   clearBtn.addEventListener('click', () => {
@@ -94,6 +90,6 @@
     searchInput.focus();
   });
 
-  // initial render (ensure any markup removed/shown appropriately)
+  // initial render
   searchAndSort();
 })();

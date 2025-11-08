@@ -1,72 +1,4 @@
-// ========================
-// Navigation & Courses JS
-// ========================
-
-(function () {
-  // --- Navigation Setup ---
-  const nav = document.querySelector('.main-nav');
-  const hamburger = nav?.querySelector('.hamburger');
-  const menu = nav?.querySelector('ul');
-
-  if (nav && hamburger && menu) {
-
-    function toggleMenu(open) {
-      hamburger.setAttribute('aria-expanded', open);
-      menu.classList.toggle('show', open);
-      if (open) menu.querySelector('a')?.focus();
-    }
-
-    // Hamburger click
-    hamburger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-      toggleMenu(!isExpanded);
-    });
-
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menu.classList.contains('show')) {
-        toggleMenu(false);
-        hamburger.focus();
-      }
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && menu.classList.contains('show')) {
-        toggleMenu(false);
-      }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        const id = anchor.getAttribute('href');
-        const target = document.querySelector(id);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          if (menu.classList.contains('show')) toggleMenu(false);
-        }
-      });
-    });
-
-    // Highlight active link based on section
-    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          document.querySelectorAll('.main-nav a').forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-          });
-        }
-      });
-    }, observerOptions);
-    document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
-  }
-
-  // --- Courses / Directory Setup ---
+(() => {
   const courses = [
     { id: 'wdd231', code: 'WDD231', title: 'Web Development I', subject: 'Web', credits: 3, completed: false, url: '#' },
     { id: 'bus101', code: 'BUS101', title: 'Introduction to Business', subject: 'Business', credits: 3, completed: false, url: '#' },
@@ -78,6 +10,8 @@
   const searchEl = document.getElementById('course-search');
   const subjectFilterEl = document.getElementById('subject-filter');
   const creditsEl = document.getElementById('credits-count');
+  const progressEl = document.getElementById('progress-fill');
+  const progressText = document.getElementById('progress-text');
   const clearBtn = document.getElementById('clear-filters');
 
   if (!listEl) return;
@@ -157,17 +91,19 @@
 
   function updateCredits() {
     const checked = Array.from(listEl.querySelectorAll('.course-select:checked')).map(i => i.dataset.id);
-    const total = courses.filter(c => checked.includes(c.id)).reduce((sum, c) => sum + (Number(c.credits) || 0), 0);
+    const total = courses
+      .filter(c => checked.includes(c.id))
+      .reduce((sum, c) => sum + (Number(c.credits) || 0), 0);
+
+    // Update credits display
     creditsEl.textContent = total;
 
-    // Update progress bar
+    // Update progress bar dynamically
     const totalCredits = courses.reduce((sum, c) => sum + c.credits, 0);
-    const progressEl = document.getElementById('progress-fill');
-    const progressText = document.getElementById('progress-text');
-    if(progressEl && progressText){
+    if (progressEl && progressText) {
       const percent = Math.min((total / totalCredits) * 100, 100);
       progressEl.style.width = percent + '%';
-      progressText.textContent = `${total} of ${totalCredits} credits completed`;
+      progressText.textContent = `${total} of ${totalCredits} credits completed (${Math.round(percent)}%)`;
     }
   }
 
@@ -199,5 +135,4 @@
   populateSubjects();
   initControls();
   render({ q: '', subject: 'all' });
-
 })();
