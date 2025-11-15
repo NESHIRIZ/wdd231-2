@@ -23,7 +23,7 @@
       toggleMenu(!isExpanded);
     });
 
-    // Close on ESC
+    // Close on ESC key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && menu.classList.contains('show')) {
         toggleMenu(false);
@@ -31,7 +31,7 @@
       }
     });
 
-    // Close when clicking outside
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && menu.classList.contains('show')) {
         toggleMenu(false);
@@ -52,8 +52,14 @@
     });
 
     // Highlight active link based on section
-    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
-    const observer = new IntersectionObserver(entries => {
+    const sections = document.querySelectorAll('section[id]');
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.4
+    };
+
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
@@ -63,7 +69,8 @@
         }
       });
     }, observerOptions);
-    document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+
+    sections.forEach(section => observer.observe(section));
   }
 
   // --- Courses / Directory Setup ---
@@ -160,7 +167,6 @@
     const total = courses.filter(c => checked.includes(c.id)).reduce((sum, c) => sum + (Number(c.credits) || 0), 0);
     creditsEl.textContent = total;
 
-    // Update progress bar
     const totalCredits = courses.reduce((sum, c) => sum + c.credits, 0);
     const progressEl = document.getElementById('progress-fill');
     const progressText = document.getElementById('progress-text');
@@ -201,3 +207,4 @@
   render({ q: '', subject: 'all' });
 
 })();
+
