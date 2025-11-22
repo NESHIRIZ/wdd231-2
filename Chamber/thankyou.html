@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tsumeb Chamber — Thank You</title>
+  <meta name="description" content="Thank you for joining the Tsumeb Chamber of Commerce." />
+  <meta name="author" content="Tafadzwa Sibanda" />
+
+  <link href="styles/main.css" rel="stylesheet" />
+  <link href="styles/animations2.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header role="banner" class="site-header">
+    <div class="logo-container">
+      <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber logo" width="96" height="96" />
+      <h1 class="chamber-title">TSUMEB CHAMBER OF COMMERCE</h1>
+    </div>
+
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Thank You Content -->
+  <main id="main" class="site-main" role="main">
+    <section class="thank-you-section" style="padding:3rem 1rem; max-width:700px; margin:0 auto; text-align:center;">
+      <h2>Thank You for Joining!</h2>
+      <p class="lead">We have received your membership application. Here is the information you submitted:</p>
+
+      <div class="thank-you-cards" style="display:grid; gap:1rem; margin-top:2rem;">
+        <div class="membership-card animate-fadeIn">
+          <h4>First Name</h4>
+          <p id="display-firstName"></p>
+        </div>
+        <div class="membership-card animate-fadeIn">
+          <h4>Last Name</h4>
+          <p id="display-lastName"></p>
+        </div>
+        <div class="membership-card animate-fadeIn">
+          <h4>Email</h4>
+          <p id="display-email"></p>
+        </div>
+        <div class="membership-card animate-fadeIn">
+          <h4>Phone</h4>
+          <p id="display-phone"></p>
+        </div>
+        <div class="membership-card animate-fadeIn">
+          <h4>Organization</h4>
+          <p id="display-organization"></p>
+        </div>
+        <div class="membership-card animate-fadeIn">
+          <h4>Membership Level</h4>
+          <p id="display-membership"></p>
+        </div>
+        <div class="membership-card animate-fadeIn">
+          <h4>Date Submitted</h4>
+          <p id="display-timestamp"></p>
+        </div>
+      </div>
+
+      <p style="margin-top:2rem;">
+        <a href="index.html" class="cta-button">Return to Home</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber logo" width="120" height="120" />
+        <p>Promoting Business & Digital Excellence</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="directory.html">Directory</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TSUMEB CHAMBER OF COMMERCE | All Rights Reserved</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/member.js" defer></script>
+
+  <script>
+    // Parse query string from GET form submission
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById('display-firstName').textContent = params.get('firstName') || 'N/A';
+    document.getElementById('display-lastName').textContent = params.get('lastName') || 'N/A';
+    document.getElementById('display-email').textContent = params.get('email') || 'N/A';
+    document.getElementById('display-phone').textContent = params.get('phone') || 'N/A';
+    document.getElementById('display-organization').textContent = params.get('organization') || 'N/A';
+    document.getElementById('display-membership').textContent = params.get('membership') || 'N/A';
+    document.getElementById('display-timestamp').textContent = params.get('timestamp') || new Date().toLocaleString();
+  </script>
+</body>
+</html>
