@@ -186,15 +186,6 @@ header {
   color: var(--accent-dark);
   box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 
-  .membership-card {
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-
   
   /* Floating animation */
   animation: floatCard 3s ease-in-out infinite;
@@ -367,6 +358,13 @@ header {
 }
 
 
+.chamber-title {
+    color: #333333; /* darker shade for better contrast */
+}
+
+.lead {
+    color: #222222; /* ensures body text is readable */
+}
 
 
 

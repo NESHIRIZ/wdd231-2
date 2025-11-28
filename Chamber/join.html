@@ -3,26 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tsumeb Chamber — Join</title>
+  <titl>Join — Tsumeb Chamber of Commerce</titl>
   <meta name="description" content="Join the Tsumeb Chamber of Commerce — membership application form." />
   <meta name="author" content="Tafadzwa Sibanda" />
 
   <!-- keep links to your site CSS files here (CSS provided separately) -->
   <link href="styles/main.css" rel="stylesheet" />
   <link href="styles/animations2.css" rel="stylesheet" />
+  <link href="styles/animations.css" rel="stylesheet"/>
+
 </head>
 <body>
   <!-- Header / Navigation (keeps same structure as your site) -->
   <header role="banner" class="site-header">
     <div class="logo-container">
-      <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber logo" width="96" height="96" />
-      <h1 class="chamber-title">TSUMEB CHAMBER OF COMMERCE</h1>
-    </div>
+    <img src="images/tafadzwa-logo.svg" alt="TSUMEB Chamber Logo" class="animate-pulse" width="96" height="96" />
+    <h1 class="chamber-title" aria-hidden="true">TSUMEB CHAMBER OF COMMERCE</h1>
+    <h1>Join the Chamber Membership</h1>
 
-    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
-      <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
+    </div>
+      <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav-menu">
+      <span></span><span></span><span></span>
       </button>
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
@@ -35,7 +38,7 @@
 
   <main id="main" class="site-main" role="main">
     <header class="page-header">
-      <h2>Chamber Membership — Join</h2>
+      <h2>Join — Tsumeb Chamber of Commerce</h2>
       <p class="lead">Complete this application to become a member of the Tsumeb Chamber of Commerce.</p>
     </header>
 
@@ -47,89 +50,110 @@
 
         <!-- Form: GET --> 
         <form id="join-form" method="get" action="thankyou.html" autocomplete="on" novalidate>
-          <!-- First name -->
+          
+          <!--first name-->
           <label>
-            <span class="label-text">First name <span aria-hidden="true">*</span></span>
-            <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              title="Applicant's first name"
-              autocomplete="given-name"
-              required
-            />
+          <span class="label-text">First name <span aria-hidden="true">*</span></span>
+          <input
+          type="text"
+           name="firstName"
+           id="firstName"
+           title="Applicant's first name"
+           autocomplete="given-name"
+           placeholder="e.g., Tafadzwa"
+           pattern="^[A-Za-z\s'-]{2,}$"
+          required
+           />
           </label>
 
-          <!-- Last name -->
+         <!--last name-->
           <label>
-            <span class="label-text">Last name <span aria-hidden="true">*</span></span>
-            <input
-              type="text"
-              name="lastName"
-              id="lastName"
-              title="Applicant's last name"
-              autocomplete="family-name"
-              required
-            />
-          </label>
+           <span class="label-text">Last name <span aria-hidden="true">*</span></span>
+          <input
+           type="text"
+            name="lastName"
+            id="lastName"
+             title="Applicant's last name"
+            autocomplete="family-name"
+            placeholder="e.g., Sibanda"
+             pattern="^[A-Za-z\s'-]{2,}$"
+             required
+                  />
+           </label>
 
           <!-- Organizational title (pattern: letters, hyphens, spaces, min 7) -->
-          <label>
-            <span class="label-text">Organizational title</span>
+             <label>
+            <span class="label-text">Organizational title <span aria-hidden="true">*</span></span>
             <input
-              type="text"
-              name="orgTitle"
+             type="text"
+             name="orgTitle"
               id="orgTitle"
-              title="Organizational title (letters, hyphens and spaces only, minimum 7 characters)"
+             title="Organizational title (letters, hyphens, spaces, and apostrophes only, minimum 7 characters)"
               autocomplete="organization-title"
-              pattern="^[A-Za-z\s-]{7,}$"
+              pattern="^[A-Za-z\s'-]{7,}$"
               placeholder="e.g., Chief Operations Officer"
-            />
-            <small class="form-hint">Letters, hyphens and spaces only (minimum 7 characters).</small>
-          </label>
+              required
+              aria-describedby="orgTitleHint"
+                 />
+                <small id="orgTitleHint" class="form-hint">
+                Letters, hyphens, spaces, and apostrophes only (minimum 7 characters).
+                  </small>
+             </label>
+
 
           <!-- Email -->
-          <label>
-            <span class="label-text">Email address <span aria-hidden="true">*</span></span>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              title="Applicant's email address"
-              autocomplete="email"
-              placeholder="name@example.com"
-              required
-            />
-          </label>
+            <label>
+  <span class="label-text">Email address <span aria-hidden="true">*</span></span>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    title="Applicant's email address"
+    autocomplete="email"
+    placeholder="name@example.com"
+    required
+    aria-describedby="emailHint"
+  />
+  <small id="emailHint" class="form-hint">Enter a valid email address (e.g., name@example.com).</small>
+</label>
+
 
           <!-- Mobile phone -->
           <label>
-            <span class="label-text">Mobile phone <span aria-hidden="true">*</span></span>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              title="Applicant's mobile phone number"
-              autocomplete="tel"
-              placeholder="+264 81 234 5678"
-              required
-            />
-          </label>
+  <span class="label-text">Mobile phone <span aria-hidden="true">*</span></span>
+  <input
+    type="tel"
+    name="phone"
+    id="phone"
+    title="Applicant's mobile phone number"
+    autocomplete="tel"
+    placeholder="+264 81 234 5678"
+    required
+    pattern="^\+?\d{9,15}$"
+    inputmode="tel"
+    aria-describedby="phoneHint"
+  />
+  <small id="phoneHint" class="form-hint">Enter your phone number, e.g., +264812345678.</small>
+</label>
+
 
           <!-- Business / Organization name -->
-           <label class="modern-input">
-             <input
-              type="text"
-               name="organization"
-             id="organization"
-              title="Business or organization name"
-              autocomplete="organization"
-              placeholder=" "
-                required
-                     />
-                     <span class="label-text">Business / Organization name <span aria-hidden="true">*</span></span>
-                   <span class="error-message" id="org-error" aria-live="polite"></span>
-           </label>
+            <label class="modern-input">
+  <input
+    type="text"
+    name="organization"
+    id="organization"
+    title="Business or organization name"
+    autocomplete="organization"
+    placeholder=" "
+    required
+    pattern="^[A-Za-z0-9\s&'-]{2,}$"
+    aria-describedby="org-error"
+  />
+  <span class="label-text">Business / Organization name <span aria-hidden="true">*</span></span>
+  <span class="error-message" id="org-error" aria-live="polite">Enter your business or organization name.</span>
+</label>
+
 
           <!-- Membership selection (radio group) -->
           <fieldset aria-labelledby="membership-legend" class="membership-fieldset">
@@ -345,11 +369,10 @@
   </footer>
 
   <!-- Scripts -->
-   <script src="scripts/navigation.js" defer></script>
+   <script src="scripts/navigation1.js" defer></script>
   <script src="scripts/date.js" defer></script>
   <script src="scripts/member.js" defer></script>
   <script src="scripts/main.js" defer></script>
-  <script src="scripts/member.js" defer></script>
   
 
 </body>
