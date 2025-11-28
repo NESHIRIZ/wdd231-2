@@ -117,17 +117,19 @@
           </label>
 
           <!-- Business / Organization name -->
-          <label>
-            <span class="label-text">Business / Organization name <span aria-hidden="true">*</span></span>
-            <input
+           <label class="modern-input">
+             <input
               type="text"
-              name="organization"
-              id="organization"
+               name="organization"
+             id="organization"
               title="Business or organization name"
               autocomplete="organization"
-              required
-            />
-          </label>
+              placeholder=" "
+                required
+                     />
+                     <span class="label-text">Business / Organization name <span aria-hidden="true">*</span></span>
+                   <span class="error-message" id="org-error" aria-live="polite"></span>
+           </label>
 
           <!-- Membership selection (radio group) -->
           <fieldset aria-labelledby="membership-legend" class="membership-fieldset">
