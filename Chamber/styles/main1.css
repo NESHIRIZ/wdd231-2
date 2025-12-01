@@ -1,11 +1,13 @@
-/* ===================== VARIABLES ===================== */
-:root { --primary-blue: #3B8CD9; /* main light blue */
-   --accent-dark: #1E6FB8; /* deeper blue for accents */
-   --primary-grey: #F3F4F6; /* very light grey background */
+/* ===================== VARIABLES =================*/
+
+:root { 
+--primary-blue: #3B8CD9; /* main light blue */
+ --accent-dark: #1E6FB8; /* deeper blue for accents */
+  --primary-grey: #F3F4F6; /* very light grey background */
    --card-white: #ffffff;
-   --text-dark: #1f2937;
-   --muted: #6b7280;
-   --max-width: 1300px; }
+    --text-dark: #1f2937;
+     --muted: #6b7280;
+      --max-width: 1300px; }
 
 /* ===================== RESET & BASE ===================== */
 * { box-sizing: border-box; }
@@ -33,26 +35,6 @@ header {
   color: #fff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
-
-
-header {
-  position: relative; /* already flex, just add this */
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.15); /* slightly dark overlay */
-  pointer-events: none;
-  z-index: 0;
-}
-
-header * {
-  position: relative;
-  z-index: 1;
-}
-
 
 .logo-container { display: flex; align-items: center; gap: 1rem; }
 .logo-container img {
@@ -386,152 +368,85 @@ header * {
 
 
 
-/* ===================== MEMBERSHIP SECTION ===================== */
-.membership-section {
-  padding: 3rem 1rem;
-  background: var(--primary-grey);
-}
 
-.membership-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+
+
+/* ===================== DISCOVER PAGE ===================== */
+.discover-section {
+  padding: 2rem 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-.membership-card {
+.discover-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+/* Card styling */
+.discover-card {
   background: var(--card-white);
-  border-radius: 16px;
-  padding: 2rem 1rem;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 28px rgba(17,24,39,0.05);
   text-align: center;
-  font-weight: 700;
-  color: var(--accent-dark);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;       /* ensures content stacks nicely */
-  align-items: center;          /* center aligns content */
-  justify-content: space-between;
-  gap: 1rem;                    /* consistent spacing for proximity */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for repetition & consistency */
-.membership-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+.discover-card figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
 }
 
-.membership-card h4 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+.discover-card h3 {
   color: var(--accent-dark);
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
 }
 
-.membership-card p {
-  font-size: 1rem;
-  line-height: 1.5;
+.discover-card address {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.discover-card p {
+  font-size: 0.95rem;
   color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
-.card-select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-/* Responsive layout */
-@media (max-width: 767px) {
-  .membership-grid {
-    grid-template-columns: 1fr;  /* single column for mobile */
-  }
-  .membership-card {
-    padding: 1.5rem 1rem;
-    text-align: center;
-  }
-}
-
-@media (min-width: 768px) {
-  .membership-grid {
-    grid-template-columns: repeat(2, 1fr); /* tablet */
-  }
-}
-
-@media (min-width: 1024px) {
-  .membership-grid {
-    grid-template-columns: repeat(3, 1fr); /* desktop */
-  }
-}
-
-
-
-
-
-
-
-/* NAVIGATION */
-.main-nav {
-  position: relative;
-}
-
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-}
-
-/* WAYFINDING (active page highlighted) */
-.main-nav a.active,
-.main-nav a[aria-current="page"] {
-  border-bottom: 3px solid var(--accent-dark);
-  color: var(--accent-dark);
-}
-
-/* MOBILE MENU */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
+.discover-card button {
+  background: var(--primary-blue);
+  color: #fff;
   border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
   cursor: pointer;
+  font-weight: 600;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #000;
+.discover-card button:hover {
+  background: var(--accent-dark);
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-
-  .main-nav ul.open {
-    display: flex;
+/* Responsive grid areas */
+@media (min-width: 640px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 
 
