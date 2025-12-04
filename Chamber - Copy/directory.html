@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Directory — Tsumeb Chamber of Commerce</title>
+  <meta name="description" content="Browse our comprehensive business directory featuring member companies in Tsumeb. Find services, contact information, and business profiles." />
+  <meta name="author" content="Tafadzwa Sibanda" />
+  <meta name="keywords" content="Tsumeb businesses, directory, member companies, services" />
+
+  <link href="styles/main1.css" rel="stylesheet" />
+  <link href="styles/animations2.css" rel="stylesheet" />
+  <link href="styles/larger1.css" rel="stylesheet" />
+  <link href="styles/directory.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header role="banner" class="site-header animate-fadeIn">
+    <div class="logo-container">
+      <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber Logo" width="96" height="96" />
+      <h1 class="chamber-title">TSUMEB CHAMBER OF COMMERCE</h1>
+    </div>
+
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="main-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="directory-hero animate-slideIn" aria-labelledby="hero-heading">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="hero-heading">Business Directory</h1>
+      <p>Discover and connect with local businesses and entrepreneurs in Tsumeb</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" role="main">
+    <!-- Directory Section -->
+    <section class="directory-section" aria-labelledby="directory-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="directory-heading">Find Local Businesses</h2>
+          <p>Browse through our member directory and connect with businesses across different industries</p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="directory-controls">
+          <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search by business name or keyword..."
+              aria-label="Search businesses"
+            />
+          </div>
+
+          <div class="filter-controls">
+            <select id="category-filter" class="filter-select" aria-label="Filter by category">
+              <option value="">All Categories</option>
+              <option value="retail">Retail & Commerce</option>
+              <option value="technology">Technology & IT</option>
+              <option value="hospitality">Hospitality & Tourism</option>
+              <option value="agriculture">Agriculture & Mining</option>
+              <option value="healthcare">Healthcare & Services</option>
+              <option value="finance">Finance & Insurance</option>
+              <option value="education">Education & Training</option>
+              <option value="construction">Construction & Real Estate</option>
+            </select>
+
+            <select id="sort-filter" class="filter-select" aria-label="Sort businesses">
+              <option value="name-asc">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+              <option value="newest">Newest Members</option>
+              <option value="featured">Featured First</option>
+            </select>
+          </div>
+
+          <div class="view-controls">
+            <button class="view-btn active" id="grid-view" aria-label="Grid view" title="Grid View">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
+              </svg>
+            </button>
+            <button class="view-btn" id="list-view" aria-label="List view" title="List View">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="results-info">
+          <p id="results-count">Showing <span id="count-number">0</span> businesses</p>
+          <button id="reset-filters" class="reset-btn" style="display: none;">Clear All Filters</button>
+        </div>
+
+        <!-- Members Grid (Default View) -->
+        <div id="members-container" class="member-grid" role="region" aria-live="polite" aria-label="Business listings">
+          <!-- Members will be loaded here by JavaScript -->
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading businesses...</p>
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+          <div class="empty-icon">🔎</div>
+          <h3>No Businesses Found</h3>
+          <p>Try adjusting your search criteria or browse all categories</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Directory Stats Section -->
+    <section class="directory-stats" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading" class="sr-only">Directory Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">🏢</div>
+            <div class="stat-value">250+</div>
+            <div class="stat-label">Member Businesses</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🏭</div>
+            <div class="stat-value">12</div>
+            <div class="stat-label">Industry Categories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-value">5000+</div>
+            <div class="stat-label">Employed Members</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-value">40%</div>
+            <div class="stat-label">YoY Growth</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Members Section -->
+    <section class="featured-members" aria-labelledby="featured-heading">
+      <div class="container">
+        <h2 id="featured-heading">Featured Businesses</h2>
+        <div class="featured-grid">
+          <div class="featured-card">
+            <div class="featured-badge">⭐ Featured</div>
+            <div class="featured-image">🏪</div>
+            <h3>TechHub Namibia</h3>
+            <p class="featured-category">Technology & IT</p>
+            <p class="featured-desc">Leading provider of IT solutions and digital transformation services for businesses in Northern Namibia.</p>
+            <div class="featured-contact">
+              <a href="tel:+264612345678" class="contact-link">📱 +264 61 234 5678</a>
+              <a href="mailto:info@techhub.na" class="contact-link">📧 info@techhub.na</a>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-badge">⭐ Featured</div>
+            <div class="featured-image">🏨</div>
+            <h3>Tsumeb Hospitality Group</h3>
+            <p class="featured-category">Hospitality & Tourism</p>
+            <p class="featured-desc">Premium accommodation and tourism services. Offering world-class hospitality experiences.</p>
+            <div class="featured-contact">
+              <a href="tel:+264612987654" class="contact-link">📱 +264 61 298 7654</a>
+              <a href="mailto:reservations@tsumebhospitality.com" class="contact-link">📧 reservations@tsumebhospitality.com</a>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-badge">⭐ Featured</div>
+            <div class="featured-image">🏥</div>
+            <h3>Tsumeb Medical Centre</h3>
+            <p class="featured-category">Healthcare & Services</p>
+            <p class="featured-desc">State-of-the-art medical facility providing comprehensive healthcare services to the community.</p>
+            <div class="featured-contact">
+              <a href="tel:+264612555000" class="contact-link">📱 +264 61 255 5000</a>
+              <a href="mailto:info@tsumebmedical.com" class="contact-link">📧 info@tsumebmedical.com</a>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Directory CTA Section -->
+    <section class="directory-cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">List Your Business</h2>
+        <p>Get your business discovered by thousands of potential customers and partners in Tsumeb</p>
+        <a href="join.html" class="btn btn-lg btn-primary">Become a Member</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="site-footer animate-fadeIn">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber logo" width="120" height="120" />
+        <p>Promoting Business & Digital Excellence</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>📧 <a href="mailto:info@tsumebchamber.com">info@tsumebchamber.com</a></p>
+        <p>📱 <a href="tel:+264612612345">+264 61 261 2345</a></p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.4 8.98h4.16V24H.4V8.98zM8.98 8.98h3.99v2.04h.06c.56-1.06 1.93-2.18 3.98-2.18 4.26 0 5.05 2.8 5.05 6.44V24h-4.16v-7.02c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24H8.98V8.98z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38c-.84.5-1.77.86-2.76 1.06A4.28 4.28 0 0 0 11.07 9.5c0 .34.04.67.11.99A12.14 12.14 0 0 1 3.15 5.15a4.28 4.28 0 0 0 1.32 5.71c-.66-.02-1.29-.2-1.84-.5v.05a4.28 4.28 0 0 0 3.43 4.2c-.5.14-1.02.16-1.56.06a4.28 4.28 0 0 0 4 2.97 8.58 8.58 0 0 1-5.3 1.83A8.8 8.8 0 0 1 2 19.54 12.09 12.09 0 0 0 8.29 21c7.54 0 11.67-6.25 11.67-11.66 0-.18 0-.36-.01-.54A8.3 8.3 0 0 0 22.46 6z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.4c0-2.2 1.3-3.4 3.3-3.4.95 0 1.94.17 1.94.17v2.1h-1.08c-1.07 0-1.4.66-1.4 1.33v1.6h2.4l-.38 2.9h-2.02v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TSUMEB CHAMBER OF COMMERCE | All Rights Reserved</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/navigation1.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/directory.js" defer></script>
+  <script defer>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
+

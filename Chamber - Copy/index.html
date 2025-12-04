@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home — Tsumeb Chamber of Commerce</title>
+  <meta name="description" content="Welcome to Tsumeb Chamber of Commerce. Promoting business excellence and community growth in Tsumeb, Namibia." />
+  <meta name="author" content="Tafadzwa Sibanda" />
+  <meta name="keywords" content="Tsumeb chamber, business, commerce, Namibia" />
+
+  <link href="styles/main1.css" rel="stylesheet" />
+  <link href="styles/animations2.css" rel="stylesheet" />
+  <link href="styles/larger1.css" rel="stylesheet" />
+  <link href="styles/home.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header role="banner" class="site-header animate-fadeIn">
+    <div class="logo-container">
+      <img src="images/tafadzwa-logo.svg" alt="TSUMEB Chamber Logo" width="96" height="96" />
+      <h1 class="chamber-title">TSUMEB CHAMBER OF COMMERCE</h1>
+    </div>
+
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="main-nav-menu">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="cta-button">Join Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Greeting & Weather Widget -->
+  <section class="greeting-weather-section" aria-labelledby="greeting-heading">
+    <div class="container">
+      <div class="greeting-widget">
+        <div class="greeting-content">
+          <div class="greeting-icon" id="greeting-icon">🌤️</div>
+          <div class="greeting-text">
+            <h2 id="greeting-heading" class="greeting-title">Good Morning!</h2>
+            <p id="current-time" class="current-time">Loading time...</p>
+          </div>
+        </div>
+        <div class="weather-widget" id="weather-widget" role="region" aria-live="polite" aria-label="Weather information">
+          <div class="weather-loading">
+            <div class="spinner-small"></div>
+            <p>Loading weather...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero home-hero animate-slideIn" aria-labelledby="hero-heading">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2 id="hero-heading">Welcome to Tsumeb Chamber of Commerce</h2>
+      <p>Connecting businesses, fostering growth, and building a stronger community</p>
+      <div class="hero-cta">
+        <a href="join.html" class="btn btn-primary">Join Our Chamber</a>
+        <a href="discover.html" class="btn btn-secondary">Explore Tsumeb</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" role="main">
+    <!-- Featured Section -->
+    <section class="featured-section" aria-labelledby="featured-heading">
+      <div class="container">
+        <h2 id="featured-heading">Why Join Our Chamber?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Networking</h3>
+            <p>Connect with local business leaders, entrepreneurs, and professionals to build valuable relationships and partnerships.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Growth</h3>
+            <p>Access resources, training, and opportunities designed to help your business thrive and expand in our community.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Advocacy</h3>
+            <p>We represent the interests of our members and advocate for business-friendly policies and initiatives.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📣</div>
+            <h3>Visibility</h3>
+            <p>Gain exposure through our directory, events, and marketing channels to reach potential customers and partners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="events-section" aria-labelledby="events-heading">
+      <div class="container">
+        <h2 id="events-heading">📅 Upcoming Events</h2>
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-date">Jan 15</div>
+            <h3>Monthly Networking Breakfast</h3>
+            <p>Join us for coffee and conversation with fellow chamber members. A great opportunity to build relationships.</p>
+            <a href="#" class="event-link">Learn More →</a>
+          </div>
+          <div class="event-card">
+            <div class="event-date">Jan 22</div>
+            <h3>Business Growth Workshop</h3>
+            <p>Expert-led workshop on scaling your business and maximizing profitability in today's market.</p>
+            <a href="#" class="event-link">Learn More →</a>
+          </div>
+          <div class="event-card">
+            <div class="event-date">Feb 05</div>
+            <h3>Community Leaders Summit</h3>
+            <p>Annual gathering of business leaders to discuss initiatives and opportunities for community development.</p>
+            <a href="#" class="event-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="past-events-section" aria-labelledby="past-events-heading">
+      <div class="container">
+        <h2 id="past-events-heading">✨ Past Events Highlights</h2>
+        <p class="past-events-subtitle">Celebrating our community's achievements and memorable moments</p>
+        <div class="past-events-grid">
+          <div class="past-event-card">
+            <div class="past-event-image">
+              <div class="image-placeholder">📸</div>
+            </div>
+            <div class="past-event-content">
+              <h3>Annual Awards Ceremony 2024</h3>
+              <p class="event-date-text">December 15, 2024</p>
+              <p>Celebrated outstanding achievements of our member businesses and recognized excellence in community service. Over 200 attendees participated in this gala event.</p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="past-event-card">
+            <div class="past-event-image">
+              <div class="image-placeholder">🏢</div>
+            </div>
+            <div class="past-event-content">
+              <h3>Q4 Business Expo 2024</h3>
+              <p class="event-date-text">November 28, 2024</p>
+              <p>Brought together 50+ businesses showcasing products and services. Members gained valuable networking opportunities and business leads worth thousands in NAD.</p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="past-event-card">
+            <div class="past-event-image">
+              <div class="image-placeholder">🎓</div>
+            </div>
+            <div class="past-event-content">
+              <h3>Digital Marketing Masterclass</h3>
+              <p class="event-date-text">November 10, 2024</p>
+              <p>Expert trainers conducted an intensive workshop on modern digital marketing strategies. 85 business owners learned practical techniques to grow their online presence.</p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="past-event-card">
+            <div class="past-event-image">
+              <div class="image-placeholder">🤝</div>
+            </div>
+            <div class="past-event-content">
+              <h3>Monthly Networking Lunch</h3>
+              <p class="event-date-text">October 25, 2024</p>
+              <p>Hosted our regular networking lunch where members shared business insights and formed strategic partnerships. Several business collaborations were initiated.</p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="past-event-card">
+            <div class="past-event-image">
+              <div class="image-placeholder">🏆</div>
+            </div>
+            <div class="past-event-content">
+              <h3>Leadership Summit 2024</h3>
+              <p class="event-date-text">September 18, 2024</p>
+              <p>Distinguished speakers discussed economic trends and leadership challenges. Keynote address focused on sustainable business practices and community development.</p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="past-event-card">
+            <div class="past-event-image">
+              <div class="image-placeholder">💼</div>
+            </div>
+            <div class="past-event-content">
+              <h3>Chamber Member Appreciation Gala</h3>
+              <p class="event-date-text">August 30, 2024</p>
+              <p>Annual appreciation event honoring our members' contributions to the community. Enjoyed fine dining and celebrated the growth achieved throughout the year.</p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="stats-section" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading" class="sr-only">Chamber Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">250+</div>
+            <p>Active Members</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <p>Annual Events</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <p>Partnerships</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">15+</div>
+            <p>Years Serving</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Grow Your Business?</h2>
+        <p>Become part of Tsumeb's thriving business community today. Membership includes networking opportunities, business resources, and community events.</p>
+        <a href="join.html" class="btn btn-lg btn-primary">Start Your Membership</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="site-footer animate-fadeIn">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber logo" width="120" height="120" />
+        <p>Promoting Business & Digital Excellence</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>📧 <a href="mailto:info@tsumebchamber.com">info@tsumebchamber.com</a></p>
+        <p>📱 <a href="tel:+264612612345">+264 61 261 2345</a></p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.4 8.98h4.16V24H.4V8.98zM8.98 8.98h3.99v2.04h.06c.56-1.06 1.93-2.18 3.98-2.18 4.26 0 5.05 2.8 5.05 6.44V24h-4.16v-7.02c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24H8.98V8.98z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38c-.84.5-1.77.86-2.76 1.06A4.28 4.28 0 0 0 11.07 9.5c0 .34.04.67.11.99A12.14 12.14 0 0 1 3.15 5.15a4.28 4.28 0 0 0 1.32 5.71c-.66-.02-1.29-.2-1.84-.5v.05a4.28 4.28 0 0 0 3.43 4.2c-.5.14-1.02.16-1.56.06a4.28 4.28 0 0 0 4 2.97 8.58 8.58 0 0 1-5.3 1.83A8.8 8.8 0 0 1 2 19.54 12.09 12.09 0 0 0 8.29 21c7.54 0 11.67-6.25 11.67-11.66 0-.18 0-.36-.01-.54A8.3 8.3 0 0 0 22.46 6z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.4c0-2.2 1.3-3.4 3.3-3.4.95 0 1.94.17 1.94.17v2.1h-1.08c-1.07 0-1.4.66-1.4 1.33v1.6h2.4l-.38 2.9h-2.02v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TSUMEB CHAMBER OF COMMERCE | All Rights Reserved</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/navigation1.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/weather.js" defer></script>
+  <script type="module" src="scripts/greeting.js" defer></script>
+  <script defer>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>

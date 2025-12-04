@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join Us — Tsumeb Chamber of Commerce</title>
+  <meta name="description" content="Join Tsumeb Chamber of Commerce and become part of a thriving business community. Choose from Silver, Gold, and Platinum membership tiers." />
+  <meta name="author" content="Tafadzwa Sibanda" />
+  <meta name="keywords" content="join chamber, membership, business network, Tsumeb" />
+
+  <link href="styles/main1.css" rel="stylesheet" />
+  <link href="styles/animations2.css" rel="stylesheet" />
+  <link href="styles/larger1.css" rel="stylesheet" />
+  <link href="styles/join.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header role="banner" class="site-header animate-fadeIn">
+    <div class="logo-container">
+      <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber Logo" width="96" height="96" />
+      <h1 class="chamber-title">TSUMEB CHAMBER OF COMMERCE</h1>
+    </div>
+
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="main-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="join-hero animate-slideIn" aria-labelledby="hero-heading">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="hero-heading">Join Our Chamber</h1>
+      <p>Grow your business with networking, resources, and unlimited opportunities</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" role="main">
+    <!-- Membership Benefits Section -->
+    <section class="benefits-section" aria-labelledby="benefits-heading">
+      <div class="container">
+        <h2 id="benefits-heading">Why Join Tsumeb Chamber?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Networking Opportunities</h3>
+            <p>Connect with local business leaders, entrepreneurs, and professionals to build valuable relationships.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📈</div>
+            <h3>Business Growth</h3>
+            <p>Access resources, training, and partnerships designed to help your business thrive and expand.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📣</div>
+            <h3>Enhanced Visibility</h3>
+            <p>Get featured in our directory, newsletters, and marketing channels to reach potential customers.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🎯</div>
+            <h3>Advocacy & Support</h3>
+            <p>We represent member interests and provide business support and advocacy services.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📚</div>
+            <h3>Learning & Development</h3>
+            <p>Access workshops, seminars, and training programs to enhance your skills and knowledge.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🏆</div>
+            <h3>Recognition</h3>
+            <p>Be recognized for your excellence and achievements through our awards and events program.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Tiers Section -->
+    <section class="membership-section" aria-labelledby="membership-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="membership-heading">Choose Your Membership Tier</h2>
+          <p>Select the perfect plan to match your business needs and grow with us</p>
+        </div>
+
+        <!-- Tier Toggle -->
+        <div class="billing-toggle">
+          <label class="toggle-label">
+            <input type="checkbox" id="billing-toggle" class="toggle-input" />
+            <span class="toggle-track"></span>
+            <span class="billing-text">Billed Annually (Save 20%)</span>
+          </label>
+        </div>
+
+        <!-- Membership Tiers -->
+        <div class="tiers-grid">
+          <!-- Silver Tier -->
+          <div class="tier-card">
+            <div class="tier-header">
+              <h3 class="tier-name">Silver</h3>
+              <p class="tier-description">Perfect for startups and small businesses</p>
+            </div>
+            <div class="tier-price">
+              <span class="currency">N$</span>
+              <span class="amount" data-monthly="2500" data-annual="30000">2,500</span>
+              <span class="period">/month</span>
+            </div>
+            <button class="btn btn-tier btn-secondary">Get Started</button>
+            <div class="tier-features">
+              <h4>Includes:</h4>
+              <ul>
+                <li><span class="check">✓</span> Business directory listing</li>
+                <li><span class="check">✓</span> Monthly networking events</li>
+                <li><span class="check">✓</span> Email support</li>
+                <li><span class="check">✓</span> Access to business resources</li>
+                <li><span class="check">✓</span> 2 event passes per month</li>
+                <li><span class="check">✗</span> Featured directory placement</li>
+                <li><span class="check">✗</span> Priority support</li>
+                <li><span class="check">✗</span> Co-marketing opportunities</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gold Tier (Featured) -->
+          <div class="tier-card tier-featured">
+            <div class="tier-badge">Most Popular</div>
+            <div class="tier-header">
+              <h3 class="tier-name">Gold</h3>
+              <p class="tier-description">For growing businesses seeking advantage</p>
+            </div>
+            <div class="tier-price">
+              <span class="currency">N$</span>
+              <span class="amount" data-monthly="5000" data-annual="60000">5,000</span>
+              <span class="period">/month</span>
+            </div>
+            <button class="btn btn-tier btn-primary">Get Started</button>
+            <div class="tier-features">
+              <h4>Includes everything in Silver, plus:</h4>
+              <ul>
+                <li><span class="check">✓</span> Business directory listing</li>
+                <li><span class="check">✓</span> Monthly networking events</li>
+                <li><span class="check">✓</span> Priority email & phone support</li>
+                <li><span class="check">✓</span> Access to all business resources</li>
+                <li><span class="check">✓</span> Unlimited event passes</li>
+                <li><span class="check">✓</span> Featured directory placement</li>
+                <li><span class="check">✓</span> Monthly newsletter feature</li>
+                <li><span class="check">✗</span> Co-marketing opportunities</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Platinum Tier -->
+          <div class="tier-card">
+            <div class="tier-header">
+              <h3 class="tier-name">Platinum</h3>
+              <p class="tier-description">For established enterprises and corporations</p>
+            </div>
+            <div class="tier-price">
+              <span class="currency">N$</span>
+              <span class="amount" data-monthly="10000" data-annual="120000">10,000</span>
+              <span class="period">/month</span>
+            </div>
+            <button class="btn btn-tier btn-secondary">Get Started</button>
+            <div class="tier-features">
+              <h4>Includes everything in Gold, plus:</h4>
+              <ul>
+                <li><span class="check">✓</span> Premium directory listing with logo</li>
+                <li><span class="check">✓</span> All networking and events</li>
+                <li><span class="check">✓</span> 24/7 dedicated support line</li>
+                <li><span class="check">✓</span> Custom business consulting</li>
+                <li><span class="check">✓</span> VIP event access & networking</li>
+                <li><span class="check">✓</span> Premium featured placement</li>
+                <li><span class="check">✓</span> Monthly spotlight feature</li>
+                <li><span class="check">✓</span> Co-marketing & sponsorship opportunities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="comparison-section" aria-labelledby="comparison-heading">
+      <div class="container">
+        <h2 id="comparison-heading">Detailed Comparison</h2>
+        <div class="table-wrapper">
+          <table class="comparison-table" role="grid">
+            <thead>
+              <tr>
+                <th scope="col">Features</th>
+                <th scope="col">Silver</th>
+                <th scope="col">Gold</th>
+                <th scope="col">Platinum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Directory Listing</td>
+                <td>✓</td>
+                <td>✓ Featured</td>
+                <td>✓ Premium</td>
+              </tr>
+              <tr>
+                <td>Event Passes</td>
+                <td>2/month</td>
+                <td>✓ Unlimited</td>
+                <td>✓ Unlimited + VIP</td>
+              </tr>
+              <tr>
+                <td>Support Access</td>
+                <td>Email</td>
+                <td>Priority</td>
+                <td>24/7 Dedicated</td>
+              </tr>
+              <tr>
+                <td>Newsletter Features</td>
+                <td>—</td>
+                <td>Monthly</td>
+                <td>Monthly Spotlight</td>
+              </tr>
+              <tr>
+                <td>Co-Marketing</td>
+                <td>—</td>
+                <td>—</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td>Business Consulting</td>
+                <td>—</td>
+                <td>—</td>
+                <td>✓ Custom</td>
+              </tr>
+              <tr>
+                <td>Sponsorship Options</td>
+                <td>—</td>
+                <td>—</td>
+                <td>✓</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="application-section" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="form-wrapper">
+          <h2 id="form-heading">Start Your Membership Today</h2>
+          <form id="membership-form" class="membership-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="business-name">Business Name *</label>
+                <input type="text" id="business-name" name="businessName" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="business-type">Business Type *</label>
+                <select id="business-type" name="businessType" required aria-required="true">
+                  <option value="">Select a category</option>
+                  <option value="retail">Retail & Commerce</option>
+                  <option value="technology">Technology & IT</option>
+                  <option value="hospitality">Hospitality & Tourism</option>
+                  <option value="agriculture">Agriculture & Mining</option>
+                  <option value="healthcare">Healthcare & Services</option>
+                  <option value="finance">Finance & Insurance</option>
+                  <option value="education">Education & Training</option>
+                  <option value="construction">Construction & Real Estate</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-person">Contact Person *</label>
+                <input type="text" id="contact-person" name="contactPerson" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required aria-required="true" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="website">Website (Optional)</label>
+                <input type="url" id="website" name="website" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="business-description">Business Description *</label>
+                <textarea id="business-description" name="businessDescription" rows="4" required aria-required="true" placeholder="Tell us about your business..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group full-width">
+                <label for="membership-tier">Select Membership Tier *</label>
+                <select id="membership-tier" name="membershipTier" required aria-required="true">
+                  <option value="">Choose a tier</option>
+                  <option value="silver">Silver - N$2,500/month</option>
+                  <option value="gold">Gold - N$5,000/month</option>
+                  <option value="platinum">Platinum - N$10,000/month</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label class="checkbox-group">
+                <input type="checkbox" name="terms" required aria-required="true" />
+                <span>I agree to the terms and conditions of membership *</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" aria-label="Submit membership application">
+              Submit Application
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I change my membership tier later?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! You can upgrade or downgrade your membership tier at any time. Changes take effect on your next billing cycle.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Is there a contract or commitment period?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We offer flexible month-to-month memberships with no long-term contract. You can cancel anytime with 30 days' notice.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What payment methods do you accept?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We accept bank transfers, card payments, and mobile money. Annual payments receive a 20% discount.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Are there any additional fees?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No hidden fees! Your membership includes all listed benefits. Optional services like specialized consulting are billed separately.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I access member resources?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Upon approval, you'll receive login credentials to access our member portal with resources, training materials, and event schedules.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is your refund policy?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>If you're not satisfied within the first 30 days, we offer a full refund. After 30 days, you can cancel with 30 days' notice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="join-cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Join?</h2>
+        <p>Join hundreds of successful businesses already thriving in our community</p>
+        <div class="cta-buttons">
+          <a href="#membership-form" class="btn btn-primary btn-lg">View Membership Options</a>
+          <a href="mailto:info@tsumebchamber.com" class="btn btn-secondary btn-lg">Contact Us First</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="site-footer animate-fadeIn">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber logo" width="120" height="120" />
+        <p>Promoting Business & Digital Excellence</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>📧 <a href="mailto:info@tsumebchamber.com">info@tsumebchamber.com</a></p>
+        <p>📱 <a href="tel:+264612612345">+264 61 261 2345</a></p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.4 8.98h4.16V24H.4V8.98zM8.98 8.98h3.99v2.04h.06c.56-1.06 1.93-2.18 3.98-2.18 4.26 0 5.05 2.8 5.05 6.44V24h-4.16v-7.02c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24H8.98V8.98z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38c-.84.5-1.77.86-2.76 1.06A4.28 4.28 0 0 0 11.07 9.5c0 .34.04.67.11.99A12.14 12.14 0 0 1 3.15 5.15a4.28 4.28 0 0 0 1.32 5.71c-.66-.02-1.29-.2-1.84-.5v.05a4.28 4.28 0 0 0 3.43 4.2c-.5.14-1.02.16-1.56.06a4.28 4.28 0 0 0 4 2.97 8.58 8.58 0 0 1-5.3 1.83A8.8 8.8 0 0 1 2 19.54 12.09 12.09 0 0 0 8.29 21c7.54 0 11.67-6.25 11.67-11.66 0-.18 0-.36-.01-.54A8.3 8.3 0 0 0 22.46 6z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.4c0-2.2 1.3-3.4 3.3-3.4.95 0 1.94.17 1.94.17v2.1h-1.08c-1.07 0-1.4.66-1.4 1.33v1.6h2.4l-.38 2.9h-2.02v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TSUMEB CHAMBER OF COMMERCE | All Rights Reserved</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/navigation1.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/join.js" defer></script>
+  <script defer>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>

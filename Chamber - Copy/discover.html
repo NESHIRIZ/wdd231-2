@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discover Tsumeb — Tsumeb Chamber of Commerce</title>
+  <meta name="description" content="Discover the rich history, culture, attractions, and business opportunities in Tsumeb, Namibia. Learn about our mining heritage and vibrant community." />
+  <meta name="author" content="Tafadzwa Sibanda" />
+  <meta name="keywords" content="Tsumeb history, Namibia, mining, attractions, culture, business" />
+
+  <link href="styles/main1.css" rel="stylesheet" />
+  <link href="styles/animations2.css" rel="stylesheet" />
+  <link href="styles/larger1.css" rel="stylesheet" />
+  <link href="styles/discover.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header role="banner" class="site-header animate-fadeIn">
+    <div class="logo-container">
+      <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber Logo" width="96" height="96" />
+      <h1 class="chamber-title">TSUMEB CHAMBER OF COMMERCE</h1>
+    </div>
+
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="main-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="discover-hero animate-slideIn" aria-labelledby="hero-heading">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="hero-heading">Discover Tsumeb</h1>
+      <p>Explore the rich heritage, vibrant culture, and thriving business opportunities</p>
+    </div>
+  </section>
+
+  <!--Visitor Message (localStorage)-->
+  <section class="visit-message" id="visit-message" aria-live="polite" aria-atomic="true">
+    <!-- Message will be injected by JS -->
+  </section>
+
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" role="main">
+    <!-- History Section -->
+    <section class="history-section" aria-labelledby="history-heading">
+      <div class="container">
+        <div class="history-content">
+          <div class="history-text">
+            <h2 id="history-heading">The Rich History of Tsumeb</h2>
+            <div class="history-intro">
+              <p>Tsumeb, located in the Oshikoto Region of Namibia, is a town steeped in history and rich mineral heritage. With a population of approximately 27,000 people, Tsumeb has evolved from a small mining settlement into a vibrant commercial and cultural hub in northern Namibia.</p>
+            </div>
+
+            <div class="history-timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-year">1893</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Discovery & Foundation</h3>
+                  <p>Tsumeb was founded following the discovery of rich copper deposits in the area. German prospectors and miners established the settlement as a mining outpost, recognizing the economic potential of the mineral-rich region.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-year">1906</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Mining Expansion</h3>
+                  <p>The Tsumeb Corporation Limited was established to formally develop and manage copper mining operations. This marked the beginning of large-scale mineral extraction and the town's transformation into a major mining center.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-year">1920s-1960s</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Golden Era of Mining</h3>
+                  <p>Tsumeb became one of Africa's most important mining centers, producing copper, lead, zinc, and other precious metals. The prosperity attracted workers and businesses from across the region, transforming Tsumeb into a thriving cosmopolitan town.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-year">1990</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Independence & Transition</h3>
+                  <p>Following Namibia's independence from South Africa, Tsumeb underwent significant economic and social changes. The town began diversifying its economy beyond mining, developing retail, hospitality, and service sectors.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-year">2000s-Present</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Modern Development</h3>
+                  <p>Today, Tsumeb is a modern commercial center with a diverse economy. While mining remains important, the town has developed strong retail, hospitality, agriculture, and service sectors, making it a key economic hub in northern Namibia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="history-image">
+            <div class="image-placeholder">
+              <img src="images/tsumeb-history.jpg" alt="Historical view of Tsumeb mining operations" />
+            </div>
+            <div class="history-facts">
+              <h3>Quick Facts</h3>
+              <ul class="facts-list">
+                <li>
+                  <span class="fact-label">Founded:</span>
+                  <span class="fact-value">1893</span>
+                </li>
+                <li>
+                  <span class="fact-label">Region:</span>
+                  <span class="fact-value">Oshikoto</span>
+                </li>
+                <li>
+                  <span class="fact-label">Population:</span>
+                  <span class="fact-value">~27,000</span>
+                </li>
+                <li>
+                  <span class="fact-label">Elevation:</span>
+                  <span class="fact-value">1,262m above sea level</span>
+                </li>
+                <li>
+                  <span class="fact-label">Main Industries:</span>
+                  <span class="fact-value">Mining, Retail, Agriculture</span>
+                </li>
+                <li>
+                  <span class="fact-label">Languages:</span>
+                  <span class="fact-value">Oshikwanyama, English, Afrikaans</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Heritage & Culture Section -->
+    <section class="heritage-section" aria-labelledby="heritage-heading">
+      <div class="container">
+        <h2 id="heritage-heading">Heritage & Cultural Significance</h2>
+        <p class="section-intro">Tsumeb is home to a diverse and vibrant community with a rich cultural tapestry shaped by centuries of history.</p>
+
+        <div class="heritage-grid">
+          <div class="heritage-card">
+            <div class="heritage-icon">🏛️</div>
+            <h3>Mining Heritage</h3>
+            <p>Tsumeb's identity is deeply rooted in mining. The town is home to world-class mineral specimens and has contributed significantly to global mining knowledge. Many international museums feature minerals from Tsumeb.</p>
+          </div>
+
+          <div class="heritage-card">
+            <div class="heritage-icon">👥</div>
+            <h3>Diverse Community</h3>
+            <p>The town's multicultural population reflects its cosmopolitan history. People from various ethnic groups, languages, and backgrounds coexist peacefully, creating a unique blend of traditions and perspectives.</p>
+          </div>
+
+          <div class="heritage-card">
+            <div class="heritage-icon">🎭</div>
+            <h3>Cultural Events</h3>
+            <p>Tsumeb hosts numerous cultural celebrations throughout the year, including traditional festivals, music events, and community gatherings that celebrate local heritage and contemporary culture.</p>
+          </div>
+
+          <div class="heritage-card">
+            <div class="heritage-icon">🏗️</div>
+            <h3>Architectural Legacy</h3>
+            <p>The town features colonial-era buildings, modern infrastructure, and well-planned urban spaces that reflect different periods of Tsumeb's development and economic prosperity.</p>
+          </div>
+
+          <div class="heritage-card">
+            <div class="heritage-icon">📚</div>
+            <h3>Educational Hub</h3>
+            <p>Tsumeb hosts several educational institutions and training centers, reflecting its commitment to human development and knowledge sharing within the community.</p>
+          </div>
+
+          <div class="heritage-card">
+            <div class="heritage-icon">🤝</div>
+            <h3>Community Spirit</h3>
+            <p>Known for its strong sense of community, Tsumeb residents actively participate in local initiatives, business development, and social programs that strengthen the town's fabric.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="attractions-section" aria-labelledby="attractions-heading">
+      <div class="container">
+        <h2 id="attractions-heading">What to Discover in Tsumeb</h2>
+        <p class="section-intro">From natural wonders to cultural landmarks, Tsumeb offers diverse attractions for visitors and residents.</p>
+
+        <div class="attractions-grid">
+          <!-- Attraction 1 -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+              <span class="attraction-icon">⛏️</span>
+            </div>
+            <h3>Tsumeb Mining Museum</h3>
+            <p>Explore the fascinating history of mining in Tsumeb through exhibits, artifacts, and displays showcasing minerals, mining equipment, and the town's geological significance.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 2 -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+              <span class="attraction-icon">🏞️</span>
+            </div>
+            <h3>Etosha National Park Access</h3>
+            <p>Located near one of Africa's largest game reserves, Tsumeb serves as a gateway to Etosha National Park, offering opportunities for wildlife viewing and nature expeditions.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 3 -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+              <span class="attraction-icon">🏛️</span>
+            </div>
+            <h3>Historical Landmarks</h3>
+            <p>Visit colonial-era buildings, churches, and monuments that tell the story of Tsumeb's development. Each landmark offers insights into different periods of the town's history.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 4 -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+              <span class="attraction-icon">🛍️</span>
+            </div>
+            <h3>Commercial Center</h3>
+            <p>Experience modern shopping, dining, and entertainment. Tsumeb's commercial district features quality shops, restaurants, and service providers catering to diverse tastes.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 5 -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+              <span class="attraction-icon">🌾</span>
+            </div>
+            <h3>Agricultural Hub</h3>
+            <p>Learn about the region's agricultural practices and farming heritage. Tsumeb and its surroundings are known for livestock farming and crop production.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 6 -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+              <span class="attraction-icon">🍽️</span>
+            </div>
+            <h3>Local Cuisine</h3>
+            <p>Taste authentic Namibian and local cuisine. Tsumeb's restaurants and eateries offer traditional dishes and international options showcasing culinary diversity.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 7 - NEW -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #ffa751 0%, #ffe259 100%);">
+              <span class="attraction-icon">🏨</span>
+            </div>
+            <h3>Tsumeb Resort & Spa</h3>
+            <p>Relax at premium resorts offering world-class accommodation, spa facilities, and recreational amenities. Perfect for both business travelers and leisure visitors seeking comfort.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 8 - NEW -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+              <span class="attraction-icon">⛺</span>
+            </div>
+            <h3>Outdoor Adventure Sites</h3>
+            <p>Discover camping sites, hiking trails, and adventure parks. Tsumeb's surrounding areas offer thrilling outdoor activities for nature enthusiasts and adventure seekers.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 9 - NEW -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+              <span class="attraction-icon">💎</span>
+            </div>
+            <h3>Gemstone & Mineral Markets</h3>
+            <p>Browse authentic Namibian gemstones, minerals, and crafts. Local artisans and vendors showcase unique minerals sourced from Tsumeb's rich geological heritage.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 10 - NEW -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+              <span class="attraction-icon">🌅</span>
+            </div>
+            <h3>Scenic Viewpoints</h3>
+            <p>Visit breathtaking natural vistas and sunset viewing points around Tsumeb. Capture stunning panoramic views of the landscape and surrounding regions.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+
+          <!-- Attraction 11 - NEW -->
+          <div class="attraction-card">
+            <div class="attraction-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+              <span class="attraction-icon">🎨</span>
+            </div>
+            <h3>Art & Cultural Galleries</h3>
+            <p>Explore local art galleries and cultural centers displaying contemporary and traditional artwork. Discover works by talented Namibian artists and artisans.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Economy & Business Section -->
+    <section class="economy-section" aria-labelledby="economy-heading">
+      <div class="container">
+        <h2 id="economy-heading">Tsumeb's Economic Landscape</h2>
+        <p class="section-intro">A thriving business hub with diverse economic sectors and growth opportunities.</p>
+
+        <div class="economy-grid">
+          <div class="economy-item">
+            <div class="economy-stat">
+              <span class="stat-number">⛏️</span>
+              <h3>Mining</h3>
+            </div>
+            <p>The historic backbone of Tsumeb's economy, mining continues to contribute significantly to employment and revenue. Modern mining operations coexist with heritage preservation efforts.</p>
+          </div>
+
+          <div class="economy-item">
+            <div class="economy-stat">
+              <span class="stat-number">🛒</span>
+              <h3>Retail & Commerce</h3>
+            </div>
+            <p>A vibrant retail sector serves both local residents and visitors. Shopping centers, boutiques, and markets offer diverse products and services, creating numerous business opportunities.</p>
+          </div>
+
+          <div class="economy-item">
+            <div class="economy-stat">
+              <span class="stat-number">🏨</span>
+              <h3>Hospitality & Tourism</h3>
+            </div>
+            <p>Growing tourism sector with hotels, guesthouses, restaurants, and entertainment venues. Tsumeb's proximity to Etosha makes it an important tourist destination.</p>
+          </div>
+
+          <div class="economy-item">
+            <div class="economy-stat">
+              <span class="stat-number">🚗</span>
+              <h3>Transportation & Logistics</h3>
+            </div>
+            <p>Strategic location on major transport routes makes Tsumeb a logistics hub. Companies specializing in freight, transportation, and supply chain management thrive here.</p>
+          </div>
+
+          <div class="economy-item">
+            <div class="economy-stat">
+              <span class="stat-number">🏥</span>
+              <h3>Healthcare & Services</h3>
+            </div>
+            <p>Well-developed healthcare and professional services sector including medical facilities, clinics, and consultation services catering to the region's needs.</p>
+          </div>
+
+          <div class="economy-item">
+            <div class="economy-stat">
+              <span class="stat-number">📚</span>
+              <h3>Education & Training</h3>
+            </div>
+            <p>Educational institutions and vocational training centers support skill development. Growing demand for technical training and professional development programs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Climate & Environment Section -->
+    <section class="climate-section" aria-labelledby="climate-heading">
+      <div class="container">
+        <h2 id="climate-heading">Climate & Environment</h2>
+        <div class="climate-grid">
+          <div class="climate-card">
+            <h3>Semi-Arid Climate</h3>
+            <p>Tsumeb experiences a semi-arid climate with distinct seasons. Average temperatures range from cool winters (10-15°C) to warm summers (25-35°C), with rainfall concentrated during summer months (November-March).</p>
+          </div>
+
+          <div class="climate-card">
+            <h3>Natural Resources</h3>
+            <p>Beyond minerals, the region features diverse wildlife, vegetation, and natural landscapes. Proximity to Etosha National Park provides access to pristine natural environments and conservation areas.</p>
+          </div>
+
+          <div class="climate-card">
+            <h3>Sustainability Efforts</h3>
+            <p>The community actively participates in environmental conservation, sustainable mining practices, and community-based natural resource management to preserve Tsumeb's natural heritage.</p>
+          </div>
+
+          <div class="climate-card">
+            <h3>Seasonal Activities</h3>
+            <p>Different seasons offer unique activities - from wildlife viewing during dry seasons to outdoor festivals and agricultural activities during wet periods. Each season brings its own charm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Visit/Invest Section -->
+    <section class="why-section" aria-labelledby="why-heading">
+      <div class="container">
+        <h2 id="why-heading">Why Tsumeb Matters</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-number">01</div>
+            <h3>Strategic Location</h3>
+            <p>Positioned on major trade routes between northern and central Namibia, Tsumeb is a key distribution and logistics hub serving the entire northern region.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">02</div>
+            <h3>Stable & Secure</h3>
+            <p>Known for its stable political environment, reliable infrastructure, and strong community governance, Tsumeb offers a secure business climate.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">03</div>
+            <h3>Workforce & Skills</h3>
+            <p>Access to trained workforce with mining expertise, technical skills, and entrepreneurial spirit. Local talent is complemented by professional training institutions.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">04</div>
+            <h3>Growth Potential</h3>
+            <p>Emerging economic diversification creates numerous opportunities in retail, tourism, agriculture, and services sectors beyond traditional mining.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">05</div>
+            <h3>Community Support</h3>
+            <p>Active chamber of commerce and community organizations provide networking, support, and advocacy for business development and economic growth.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">06</div>
+            <h3>Quality of Life</h3>
+            <p>Modern amenities, educational facilities, healthcare services, and recreational opportunities make Tsumeb an attractive place to live, work, and do business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="discover-cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Experience Tsumeb?</h2>
+        <p>Whether you're visiting as a tourist, considering relocation, or exploring business opportunities, Tsumeb welcomes you.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg">Get in Touch</a>
+          <a href="directory.html" class="btn btn-secondary btn-lg">Explore Local Businesses</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="site-footer animate-fadeIn">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="images/tafadzwa-logo.svg" alt="Tsumeb Chamber logo" width="120" height="120" />
+        <p>Promoting Business & Digital Excellence</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>📧 <a href="mailto:info@tsumebchamber.com">info@tsumebchamber.com</a></p>
+        <p>📱 <a href="tel:+264612612345">+264 61 261 2345</a></p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.4 8.98h4.16V24H.4V8.98zM8.98 8.98h3.99v2.04h.06c.56-1.06 1.93-2.18 3.98-2.18 4.26 0 5.05 2.8 5.05 6.44V24h-4.16v-7.02c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24H8.98V8.98z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38c-.84.5-1.77.86-2.76 1.06A4.28 4.28 0 0 0 11.07 9.5c0 .34.04.67.11.99A12.14 12.14 0 0 1 3.15 5.15a4.28 4.28 0 0 0 1.32 5.71c-.66-.02-1.29-.2-1.84-.5v.05a4.28 4.28 0 0 0 3.43 4.2c-.5.14-1.02.16-1.56.06a4.28 4.28 0 0 0 4 2.97 8.58 8.58 0 0 1-5.3 1.83A8.8 8.8 0 0 1 2 19.54 12.09 12.09 0 0 0 8.29 21c7.54 0 11.67-6.25 11.67-11.66 0-.18 0-.36-.01-.54A8.3 8.3 0 0 0 22.46 6z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.4c0-2.2 1.3-3.4 3.3-3.4.95 0 1.94.17 1.94.17v2.1h-1.08c-1.07 0-1.4.66-1.4 1.33v1.6h2.4l-.38 2.9h-2.02v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TSUMEB CHAMBER OF COMMERCE | All Rights Reserved</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+   <script type="module" src="scripts/discover-data.mjs"></script>
+  <script src="scripts/navigation1.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/discover.js" defer></script>
+  <script defer>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>

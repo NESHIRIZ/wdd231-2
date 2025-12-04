@@ -1,0 +1,138 @@
+:root {
+  --primary-blue: #0066cc;
+  --accent-dark: #1a3a52;
+  --success: #10b981;
+  --light-gray: #f3f4f6;
+  --border-color: #e5e7eb;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Thank You Section */
+.thank-you-section {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thank-you-section h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--accent-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.thank-you-section .lead {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* Thank You Cards */
+.thank-you-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.membership-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.membership-card h4 {
+  color: var(--accent-dark);
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.membership-card p {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* CTA Link */
+.thank-you-section p {
+  margin-top: 3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-blue), #0052a3);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-button:focus {
+  outline: 3px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+/* Animation */
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .thank-you-section {
+    padding: 2rem 1rem;
+  }
+
+  .thank-you-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .thank-you-section h2 {
+    font-size: 2rem;
+  }
+}

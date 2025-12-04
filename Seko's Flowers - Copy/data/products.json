@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Rose Elegance",
+    "category": "Bouquets",
+    "description": "Classic red roses arranged with greenery and white fillers.",
+    "price": 25,
+    "image": "images/p9.jpg",
+    "rating": 4.8,
+    "occasion": "Romantic, Anniversary"
+  },
+  {
+    "id": 2,
+    "name": "Tulip Harmony",
+    "category": "Seasonal",
+    "description": "Bright tulips in assorted spring colors.",
+    "price": 18,
+    "image": "images/p1.jpg",
+    "rating": 4.6,
+    "occasion": "Spring, Birthday"
+  },
+  {
+    "id": 3,
+    "name": "Orchid Grace",
+    "category": "Premium",
+    "description": "Exotic orchids for a touch of luxury and elegance.",
+    "price": 35,
+    "image": "images/p2.jpg",
+    "rating": 4.9,
+    "occasion": "Corporate, Special Events"
+  },
+  {
+    "id": 4,
+    "name": "Sunflower Joy",
+    "category": "Cheerful",
+    "description": "Sunny sunflowers to brighten your day and spread happiness.",
+    "price": 15,
+    "image": "images/p3.jpg",
+    "rating": 4.7,
+    "occasion": "Birthday, Get Well"
+  },
+  {
+    "id": 5,
+    "name": "Lily Purity",
+    "category": "Elegant",
+    "description": "Elegant white lilies with seasonal accents and greenery.",
+    "price": 22,
+    "image": "images/p20.jpg",
+    "rating": 4.8,
+    "occasion": "Sympathy, Congratulations"
+  },
+  {
+    "id": 6,
+    "name": "Daisy Delight",
+    "category": "Cheerful",
+    "description": "Fresh daisies arranged for a cheerful and bright look.",
+    "price": 16,
+    "image": "images/p4.jpg",
+    "rating": 4.5,
+    "occasion": "Birthday, Thank You"
+  },
+  {
+    "id": 7,
+    "name": "Mixed Spring Basket",
+    "category": "Arrangements",
+    "description": "A vibrant basket of assorted spring flowers with varied textures.",
+    "price": 28,
+    "image": "images/p5.jpg",
+    "rating": 4.7,
+    "occasion": "Spring Festival, Easter"
+  },
+  {
+    "id": 8,
+    "name": "Succulent Garden",
+    "category": "Plants",
+    "description": "Low-maintenance succulents in a stylish arrangement.",
+    "price": 20,
+    "image": "images/p6.jpg",
+    "rating": 4.6,
+    "occasion": "Housewarming, Desk Decor"
+  },
+  {
+    "id": 9,
+    "name": "Exotic Anthurium",
+    "category": "Premium",
+    "description": "Striking anthurium flowers for a unique and sophisticated look.",
+    "price": 32,
+    "image": "images/p7.jpg",
+    "rating": 4.8,
+    "occasion": "Corporate, Modern Decor"
+  },
+  {
+    "id": 10,
+    "name": "Romantic Peony",
+    "category": "Bouquets",
+    "description": "Lush peonies in soft pinks and whites for romantic occasions.",
+    "price": 30,
+    "image": "images/p8.jpg",
+    "rating": 4.9,
+    "occasion": "Wedding, Anniversary"
+  },
+  {
+    "id": 11,
+    "name": "Garden Rose Collection",
+    "category": "Bouquets",
+    "description": "Premium garden roses in multiple colors with premium greenery.",
+    "price": 40,
+    "image": "images/p10.jpg",
+    "rating": 4.9,
+    "occasion": "Wedding, VIP Event"
+  },
+  {
+    "id": 12,
+    "name": "Carnation Carnival",
+    "category": "Bouquets",
+    "description": "Vibrant carnations in festive colors perfect for celebrations.",
+    "price": 19,
+    "image": "images/p11.jpg",
+    "rating": 4.5,
+    "occasion": "Birthday, Celebration"
+  },
+  {
+    "id": 13,
+    "name": "Hydrangea Heaven",
+    "category": "Arrangements",
+    "description": "Gorgeous hydrangeas arranged with complementary greens.",
+    "price": 26,
+    "image": "images/p12.jpg",
+    "rating": 4.7,
+    "occasion": "Thank You, Congratulations"
+  },
+  {
+    "id": 14,
+    "name": "Lavender Dreams",
+    "category": "Seasonal",
+    "description": "Soothing lavender bundles perfect for relaxation and aromatherapy.",
+    "price": 17,
+    "image": "images/p13.jpg",
+    "rating": 4.6,
+    "occasion": "Wellness, Self-Care"
+  },
+  {
+    "id": 15,
+    "name": "Cherry Blossom Path",
+    "category": "Seasonal",
+    "description": "Delicate cherry blossoms evoking spring renewal and beauty.",
+    "price": 24,
+    "image": "images/p14.jpg",
+    "rating": 4.8,
+    "occasion": "Spring, Renewal"
+  },
+  {
+    "id": 16,
+    "name": "Moonlit Magnolia",
+    "category": "Premium",
+    "description": "Elegant magnolias with pristine white petals and sublime fragrance.",
+    "price": 38,
+    "image": "images/p15.jpg",
+    "rating": 4.9,
+    "occasion": "Sophisticated Events, Luxury"
+  }
+]
